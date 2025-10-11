@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Kata - Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Digital Kata</h1>
+            <p class="subtitle">Track contributions from Amjad, Asim, Awais, and Hamza</p>
+        </header>
+        
+        <div class="members-grid">
+            <!-- Amjad's Card -->
+            <div class="member-card" id="amjad-card">
+                <div class="member-name">Amjad</div>
+                <div class="amount-display" id="amjad-amount">Rs 0</div>
+                <div class="equal-share-display" id="amjad-equal-share">Equal Share: Rs 0</div>
+                <div class="balance-display" id="amjad-balance">Balance: Rs 0</div>
+                <div class="input-group">
+                    <input type="number" class="amount-input" id="amjad-input" placeholder="Enter amount" min="1">
+                    <button class="add-btn" onclick="addAmount('amjad')">Add</button>
+                </div>
+                <button class="reset-btn" onclick="resetAmount('amjad')">Reset</button>
+                <div class="history">
+                    <div class="history-title">Contribution History:</div>
+                    <div id="amjad-history"></div>
+                </div>
+            </div>
+            
+            <!-- Asim's Card -->
+            <div class="member-card" id="asim-card">
+                <div class="member-name">Asim</div>
+                <div class="amount-display" id="asim-amount">Rs 0</div>
+                <div class="equal-share-display" id="asim-equal-share">Equal Share: Rs 0</div>
+                <div class="balance-display" id="asim-balance">Balance: Rs 0</div>
+                <div class="input-group">
+                    <input type="number" class="amount-input" id="asim-input" placeholder="Enter amount" min="1">
+                    <button class="add-btn" onclick="addAmount('asim')">Add</button>
+                </div>
+                <button class="reset-btn" onclick="resetAmount('asim')">Reset</button>
+                <div class="history">
+                    <div class="history-title">Contribution History:</div>
+                    <div id="asim-history"></div>
+                </div>
+            </div>
+            
+            <!-- Awais's Card -->
+            <div class="member-card" id="awais-card">
+                <div class="member-name">Awais</div>
+                <div class="amount-display" id="awais-amount">Rs 0</div>
+                <div class="equal-share-display" id="awais-equal-share">Equal Share: Rs 0</div>
+                <div class="balance-display" id="awais-balance">Balance: Rs 0</div>
+                <div class="input-group">
+                    <input type="number" class="amount-input" id="awais-input" placeholder="Enter amount" min="1">
+                    <button class="add-btn" onclick="addAmount('awais')">Add</button>
+                </div>
+                <button class="reset-btn" onclick="resetAmount('awais')">Reset</button>
+                <div class="history">
+                    <div class="history-title">Contribution History:</div>
+                    <div id="awais-history"></div>
+                </div>
+            </div>
+            
+            <!-- Hamza's Card -->
+            <div class="member-card" id="hamza-card">
+                <div class="member-name">Hamza</div>
+                <div class="amount-display" id="hamza-amount">Rs 0</div>
+                <div class="equal-share-display" id="hamza-equal-share">Equal Share: Rs 0</div>
+                <div class="balance-display" id="hamza-balance">Balance: Rs 0</div>
+                <div class="input-group">
+                    <input type="number" class="amount-input" id="hamza-input" placeholder="Enter amount" min="1">
+                    <button class="add-btn" onclick="addAmount('hamza')">Add</button>
+                </div>
+                <button class="reset-btn" onclick="resetAmount('hamza')">Reset</button>
+                <div class="history">
+                    <div class="history-title">Contribution History:</div>
+                    <div id="hamza-history"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="total-section">
+            <h2>Total Contributions</h2>
+            <div class="total-amount" id="total-amount">Rs 0</div>
+            <div class="equal-share-total" id="equal-share-total">Equal Share Per Person: Rs 0</div>
+            <button class="reset-all-btn" onclick="resetAll()">Reset All</button>
+        </div>
+        
+        <div class="settlement-section">
+            <h2 class="settlement-title">Settlement Plan</h2>
+            <div id="settlement-info">No settlements needed - everyone has paid their equal share!</div>
+            <ul class="settlement-list" id="settlement-list"></ul>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
